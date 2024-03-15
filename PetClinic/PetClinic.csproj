@@ -72,12 +72,6 @@
   <ItemGroup>
     <Compile Include="Controller\ClientController.cs" />
     <Compile Include="Controller\DoctorController.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\Client.cs">
       <DependentUpon>PetClinicModel.tt</DependentUpon>
     </Compile>
@@ -159,13 +153,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>PetClinicModel.edmx</DependentUpon>
       <LastGenOutput>PetClinicModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="PetClinicDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="PetClinicDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>PetClinicDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
