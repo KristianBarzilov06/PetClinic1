@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -73,25 +73,25 @@
     <Compile Include="Controller\ClientController.cs" />
     <Compile Include="Controller\DoctorController.cs" />
     <Compile Include="Model\Client.cs">
-      <DependentUpon>PetClinicModel.tt</DependentUpon>
+      <DependentUpon>PetClinicDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Doctor.cs">
-      <DependentUpon>PetClinicModel.tt</DependentUpon>
+      <DependentUpon>PetClinicDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\PetClinicModel.Context.cs">
+    <Compile Include="Model\PetClinicDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PetClinicModel.Context.tt</DependentUpon>
+      <DependentUpon>PetClinicDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\PetClinicModel.cs">
+    <Compile Include="Model\PetClinicDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PetClinicModel.tt</DependentUpon>
+      <DependentUpon>PetClinicDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\PetClinicModel.Designer.cs">
+    <Compile Include="Model\PetClinicDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PetClinicModel.edmx</DependentUpon>
+      <DependentUpon>PetClinicDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,12 +122,12 @@
     <EmbeddedResource Include="View\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\PetClinicModel.edmx">
+    <EntityDeploy Include="Model\PetClinicDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PetClinicModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>PetClinicDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\PetClinicModel.edmx.diagram">
-      <DependentUpon>PetClinicModel.edmx</DependentUpon>
+    <None Include="Model\PetClinicDB.edmx.diagram">
+      <DependentUpon>PetClinicDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -142,18 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model\PetClinicModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PetClinicModel.Context.cs</LastGenOutput>
-      <DependentUpon>PetClinicModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\PetClinicModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PetClinicModel.edmx</DependentUpon>
-      <LastGenOutput>PetClinicModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -171,5 +159,24 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\PetClinicDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PetClinicDB.edmx</DependentUpon>
+      <LastGenOutput>PetClinicDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\PetClinicDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PetClinicDB.edmx</DependentUpon>
+      <LastGenOutput>PetClinicDB.cs</LastGenOutput>
+    </Content>
+    <Content Include="PetClinicDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PetClinicDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>PetClinicDB.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

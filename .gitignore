@@ -361,5 +361,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/PetClinic/PetClinicDB.mdf
-/PetClinic/PetClinicDB_log.ldf

@@ -13,10 +13,10 @@ namespace PetClinic.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PetClinicDBEntities : DbContext
+    public partial class PetClinicDBEntities1 : DbContext
     {
-        public PetClinicDBEntities()
-            : base("name=PetClinicDBEntities")
+        public PetClinicDBEntities1()
+            : base("name=PetClinicDBEntities1")
         {
         }
     
