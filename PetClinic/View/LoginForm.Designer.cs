@@ -36,16 +36,18 @@
             this.LoginBtn = new System.Windows.Forms.Button();
             this.SignUpLink = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxLogin = new System.Windows.Forms.ComboBox();
+            this.ExitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.label1.Location = new System.Drawing.Point(458, 122);
+            this.label1.Location = new System.Drawing.Point(305, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 52);
+            this.label1.Size = new System.Drawing.Size(109, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign In";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -53,18 +55,20 @@
             // UsernameLb
             // 
             this.UsernameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.UsernameLb.Location = new System.Drawing.Point(466, 291);
+            this.UsernameLb.Location = new System.Drawing.Point(311, 189);
+            this.UsernameLb.Margin = new System.Windows.Forms.Padding(2);
             this.UsernameLb.Name = "UsernameLb";
-            this.UsernameLb.Size = new System.Drawing.Size(277, 44);
+            this.UsernameLb.Size = new System.Drawing.Size(186, 32);
             this.UsernameLb.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.label2.Location = new System.Drawing.Point(214, 280);
+            this.label2.Location = new System.Drawing.Point(143, 182);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 52);
+            this.label2.Size = new System.Drawing.Size(150, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "Username";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -72,19 +76,21 @@
             // PasswordLb
             // 
             this.PasswordLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.PasswordLb.Location = new System.Drawing.Point(466, 383);
+            this.PasswordLb.Location = new System.Drawing.Point(311, 249);
+            this.PasswordLb.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordLb.Name = "PasswordLb";
             this.PasswordLb.PasswordChar = '*';
-            this.PasswordLb.Size = new System.Drawing.Size(277, 44);
+            this.PasswordLb.Size = new System.Drawing.Size(186, 32);
             this.PasswordLb.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.label3.Location = new System.Drawing.Point(214, 372);
+            this.label3.Location = new System.Drawing.Point(143, 242);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 52);
+            this.label3.Size = new System.Drawing.Size(147, 36);
             this.label3.TabIndex = 4;
             this.label3.Text = "Password";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -92,9 +98,10 @@
             // LoginBtn
             // 
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.LoginBtn.Location = new System.Drawing.Point(586, 477);
+            this.LoginBtn.Location = new System.Drawing.Point(391, 310);
+            this.LoginBtn.Margin = new System.Windows.Forms.Padding(2);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(158, 65);
+            this.LoginBtn.Size = new System.Drawing.Size(105, 42);
             this.LoginBtn.TabIndex = 5;
             this.LoginBtn.Text = "Sign In";
             this.LoginBtn.UseVisualStyleBackColor = true;
@@ -103,9 +110,10 @@
             // SignUpLink
             // 
             this.SignUpLink.AutoSize = true;
-            this.SignUpLink.Location = new System.Drawing.Point(220, 503);
+            this.SignUpLink.Location = new System.Drawing.Point(147, 327);
+            this.SignUpLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SignUpLink.Name = "SignUpLink";
-            this.SignUpLink.Size = new System.Drawing.Size(202, 20);
+            this.SignUpLink.Size = new System.Drawing.Size(137, 13);
             this.SignUpLink.TabIndex = 6;
             this.SignUpLink.TabStop = true;
             this.SignUpLink.Text = "Are you new here? Sign Up";
@@ -115,32 +123,45 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.label4.Location = new System.Drawing.Point(216, 203);
+            this.label4.Location = new System.Drawing.Point(144, 132);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 52);
+            this.label4.Size = new System.Drawing.Size(77, 36);
             this.label4.TabIndex = 7;
             this.label4.Text = "Role";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // comboBox1
+            // comboBoxLogin
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxLogin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLogin.FormattingEnabled = true;
+            this.comboBoxLogin.Items.AddRange(new object[] {
             "Doctor",
             "Client"});
-            this.comboBox1.Location = new System.Drawing.Point(466, 223);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(274, 28);
-            this.comboBox1.TabIndex = 8;
+            this.comboBoxLogin.Location = new System.Drawing.Point(311, 145);
+            this.comboBoxLogin.Name = "comboBoxLogin";
+            this.comboBoxLogin.Size = new System.Drawing.Size(184, 21);
+            this.comboBoxLogin.TabIndex = 8;
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.BackColor = System.Drawing.Color.Red;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBtn.Location = new System.Drawing.Point(644, 12);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(22, 21);
+            this.ExitBtn.TabIndex = 9;
+            this.ExitBtn.Text = "X";
+            this.ExitBtn.UseVisualStyleBackColor = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 711);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(678, 462);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.comboBoxLogin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SignUpLink);
             this.Controls.Add(this.LoginBtn);
@@ -149,10 +170,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.UsernameLb);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +187,7 @@
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.LinkLabel SignUpLink;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxLogin;
+        private System.Windows.Forms.Button ExitBtn;
     }
 }

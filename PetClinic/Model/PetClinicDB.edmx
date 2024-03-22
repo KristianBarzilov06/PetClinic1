@@ -14,7 +14,7 @@
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="PetName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
-          <Property Name="DatePicker" Type="date" Nullable="false" />
+          <Property Name="DatePicker" Type="date" />
         </EntityType>
         <EntityType Name="Doctors">
           <Key>
@@ -41,7 +41,7 @@
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PetName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="DatePicker" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DatePicker" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Doctor">
           <Key>

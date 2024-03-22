@@ -4,17 +4,21 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PetClinic.View
 {
     public partial class RegisterForm : Form
     {
         private DoctorController controller;
+
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\PetClinic1\\PetClinic\\PetClinicDB.mdf;Integrated Security=True";
 
         public RegisterForm()
         {
@@ -34,14 +38,57 @@ namespace PetClinic.View
             string userType = comboBoxSignUp.SelectedItem.ToString();
             string username = usernameRegisterTxt.Text;
             string password = passwordRegisterTxt.Text;
-
-            Doctor doctor = new Doctor();
-            doctor.Username = username;
-            doctor.Password = password;
-            if (userType == "Doctor")
+            string role = comboBoxSignUp.SelectedItem != null ? comboBoxSignUp.SelectedItem.ToString() : string.Empty;
+            try
             {
-                controller.AddDoctor(doctor);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    if (string.IsNullOrEmpty(userType))
+                    {
+                        MessageBox.Show("Please choose a role!");
+                        return;
+                    }
+
+                    connection.Open();
+
+                    if (userType == "Doctor")
+                    {
+                        string query = "INSERT INTO Doctors (Username, Password) VALUES (@Username, @Password)";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@Username", username);
+                            command.Parameters.AddWithValue("@Password", password);
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    else if (userType == "Client")
+                    {
+                        string query = "INSERT INTO Clients (Username, Password) VALUES (@Username, @Password)";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@Username", username);
+                            command.Parameters.AddWithValue("@Password", password);
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid role selected!");
+                        return;
+                    }
+                }
+
+                    MessageBox.Show("Credentials saved successfully.");
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

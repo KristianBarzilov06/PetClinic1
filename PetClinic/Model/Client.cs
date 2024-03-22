@@ -19,6 +19,6 @@ namespace PetClinic.Model
         public string Password { get; set; }
         public string PetName { get; set; }
         public string Description { get; set; }
-        public System.DateTime DatePicker { get; set; }
+        public Nullable<System.DateTime> DatePicker { get; set; }
     }
 }
