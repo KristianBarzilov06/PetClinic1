@@ -31,12 +31,12 @@
             this.LoginLink = new System.Windows.Forms.LinkLabel();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSignUp = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.passwordRegisterTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.usernameRegisterTxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LoginLink
@@ -48,7 +48,7 @@
             this.LoginLink.TabIndex = 13;
             this.LoginLink.TabStop = true;
             this.LoginLink.Text = "Already have an account? Sign In";
-            this.LoginLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.LoginLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignIn_LinkClicked);
             // 
             // RegisterBtn
             // 
@@ -72,19 +72,18 @@
             this.label1.Text = "Sign Up";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // comboBox1
+            // comboBoxSignUp
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxSignUp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSignUp.FormattingEnabled = true;
+            this.comboBoxSignUp.Items.AddRange(new object[] {
             "Doctor",
             "Client"});
-            this.comboBox1.Location = new System.Drawing.Point(470, 266);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(274, 28);
-            this.comboBox1.TabIndex = 19;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxSignUp.Location = new System.Drawing.Point(470, 266);
+            this.comboBoxSignUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxSignUp.Name = "comboBoxSignUp";
+            this.comboBoxSignUp.Size = new System.Drawing.Size(274, 28);
+            this.comboBoxSignUp.TabIndex = 19;
             // 
             // label4
             // 
@@ -108,13 +107,13 @@
             this.label3.Text = "Password";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox2
+            // passwordRegisterTxt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.textBox2.Location = new System.Drawing.Point(470, 426);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(277, 44);
-            this.textBox2.TabIndex = 16;
+            this.passwordRegisterTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.passwordRegisterTxt.Location = new System.Drawing.Point(470, 426);
+            this.passwordRegisterTxt.Name = "passwordRegisterTxt";
+            this.passwordRegisterTxt.Size = new System.Drawing.Size(277, 44);
+            this.passwordRegisterTxt.TabIndex = 16;
             // 
             // label2
             // 
@@ -127,25 +126,25 @@
             this.label2.Text = "Username";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // usernameRegisterTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.textBox1.Location = new System.Drawing.Point(470, 334);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 44);
-            this.textBox1.TabIndex = 14;
+            this.usernameRegisterTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.usernameRegisterTxt.Location = new System.Drawing.Point(470, 334);
+            this.usernameRegisterTxt.Name = "usernameRegisterTxt";
+            this.usernameRegisterTxt.Size = new System.Drawing.Size(277, 44);
+            this.usernameRegisterTxt.TabIndex = 14;
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 805);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxSignUp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.passwordRegisterTxt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.usernameRegisterTxt);
             this.Controls.Add(this.LoginLink);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.label1);
@@ -161,11 +160,11 @@
         private System.Windows.Forms.LinkLabel LoginLink;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxSignUp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox passwordRegisterTxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox usernameRegisterTxt;
     }
 }

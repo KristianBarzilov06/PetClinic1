@@ -109,7 +109,7 @@
             this.SignUpLink.TabIndex = 6;
             this.SignUpLink.TabStop = true;
             this.SignUpLink.Text = "Are you new here? Sign Up";
-            this.SignUpLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.SignUpLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignUp_LinkClicked);
             // 
             // label4
             // 

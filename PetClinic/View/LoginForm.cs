@@ -17,13 +17,6 @@ namespace PetClinic.View
         {
             InitializeComponent();
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            RegisterForm register = new RegisterForm();
-            register.Show();
-            this.Hide();
-        }
         private void LoginForm_Load(object sender, EventArgs e)
         {
             
@@ -33,6 +26,13 @@ namespace PetClinic.View
         {
             ClientDashboard clientDsh = new ClientDashboard();
             clientDsh.Show();
+            this.Hide();
+        }
+
+        private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegisterForm register = new RegisterForm();
+            register.Show();
             this.Hide();
         }
     }
