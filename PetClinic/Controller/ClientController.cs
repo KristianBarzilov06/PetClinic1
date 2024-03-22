@@ -9,7 +9,7 @@ namespace PetClinic.Controller
 {
     class ClientController
     {
-        public List<Client> GetAllClients()
+        public List<Clients> GetAllClients()
         {
             using (PetClinicDBEntities db = new PetClinicDBEntities())
             {
@@ -17,7 +17,7 @@ namespace PetClinic.Controller
             }
         }
 
-        public void AddCLient(Client client)
+        public void AddCLient(Clients client)
         {
             using (PetClinicDBEntities db = new PetClinicDBEntities())
             {
@@ -26,7 +26,7 @@ namespace PetClinic.Controller
                 db.SaveChanges();
             }
         }
-        public void UpdateClient(Client client)
+        public void UpdateClient(Clients client)
         {
             using(PetClinicDBEntities db = new PetClinicDBEntities())
             {
@@ -39,7 +39,7 @@ namespace PetClinic.Controller
             }
         }
 
-        public void DeleteClient(Client client)
+        public void DeleteClient(Clients client)
         {
             using(PetClinicDBEntities db = new PetClinicDBEntities())
             {

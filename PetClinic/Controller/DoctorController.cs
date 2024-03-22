@@ -9,7 +9,7 @@ namespace PetClinic.Controller
 {
     class DoctorController
     {
-        public List<Doctor> GetAllDoctors()
+        public List<Doctors> GetAllDoctors()
         {
             using (PetClinicDBEntities db = new PetClinicDBEntities())
             {
@@ -17,7 +17,7 @@ namespace PetClinic.Controller
             }
         }
 
-        public void AddDoctor(Doctor doctor)
+        public void AddDoctor(Doctors doctor)
         {
             using (PetClinicDBEntities db = new PetClinicDBEntities())
             {
@@ -27,7 +27,7 @@ namespace PetClinic.Controller
             }
         }
 
-        public void UpdateDoctor(Doctor doctor)
+        public void UpdateDoctor(Doctors doctor)
         {
             using (PetClinicDBEntities db = new PetClinicDBEntities())
             {
@@ -41,7 +41,7 @@ namespace PetClinic.Controller
                 }
             }
         }
-        public void DeleteDoctor(Doctor doctor)
+        public void DeleteDoctor(Doctors doctor)
         {
             using (PetClinicDBEntities db = new PetClinicDBEntities())
             {

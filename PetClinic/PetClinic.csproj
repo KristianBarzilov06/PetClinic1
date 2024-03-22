@@ -72,10 +72,13 @@
   <ItemGroup>
     <Compile Include="Controller\ClientController.cs" />
     <Compile Include="Controller\DoctorController.cs" />
-    <Compile Include="Model\Client.cs">
+    <Compile Include="Model\ClientDashboard.cs">
       <DependentUpon>PetClinicDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Doctor.cs">
+    <Compile Include="Model\Clients.cs">
+      <DependentUpon>PetClinicDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Doctors.cs">
       <DependentUpon>PetClinicDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PetClinicDB.Context.cs">

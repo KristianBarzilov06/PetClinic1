@@ -14,7 +14,6 @@ namespace PetClinic.View
 {
     public partial class LoginForm : Form
     {
-
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\PetClinic1\\PetClinic\\PetClinicDB.mdf;Integrated Security=True";
         public LoginForm()
         {
@@ -78,6 +77,11 @@ namespace PetClinic.View
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -25,7 +25,8 @@ namespace PetClinic.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Client> Clients { get; set; }
-        public virtual DbSet<Doctor> Doctors { get; set; }
+        public virtual DbSet<ClientDashboard> ClientDashboard { get; set; }
+        public virtual DbSet<Clients> Clients { get; set; }
+        public virtual DbSet<Doctors> Doctors { get; set; }
     }
 }
