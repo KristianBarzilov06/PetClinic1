@@ -11,7 +11,7 @@ namespace PetClinic.Controller
     {
         public List<Client> GetAllClients()
         {
-            using (PetClinicDBEntities1 db = new PetClinicDBEntities1())
+            using (PetClinicDBEntities db = new PetClinicDBEntities())
             {
                 return db.Clients.ToList();
             }
@@ -19,23 +19,21 @@ namespace PetClinic.Controller
 
         public void AddCLient(Client client)
         {
-            using (PetClinicDBEntities1 db = new PetClinicDBEntities1())
+            using (PetClinicDBEntities db = new PetClinicDBEntities())
             {
                 client.Id = db.Clients.ToList().LastOrDefault().Id + 1;
                 db.Clients.Add(client);
                 db.SaveChanges();
             }
         }
-        public void UpdateCLient(Client client)
+        public void UpdateClient(Client client)
         {
-            using(PetClinicDBEntities1 db = new PetClinicDBEntities1())
+            using(PetClinicDBEntities db = new PetClinicDBEntities())
             {
                 var clientToUpdate = db.Clients.Where(c => c.Id == client.Id).FirstOrDefault();
                 if (clientToUpdate != null)
                 {
-                    clientToUpdate.Id = client.Id;
-                    clientToUpdate.Username = client.Username;
-                    clientToUpdate.Password = client.Password;
+                    clientToUpdate = client;
                     db.SaveChanges();
                 }
             }
@@ -43,7 +41,7 @@ namespace PetClinic.Controller
 
         public void DeleteClient(Client client)
         {
-            using(PetClinicDBEntities1 db = new PetClinicDBEntities1())
+            using(PetClinicDBEntities db = new PetClinicDBEntities())
             {
                 var clientToDelete = db.Clients.Where(c => c.Id == client.Id).FirstOrDefault();
                 if(clientToDelete != null)

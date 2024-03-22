@@ -24,14 +24,16 @@ namespace PetClinic.View
             register.Show();
             this.Hide();
         }
-
         private void LoginForm_Load(object sender, EventArgs e)
         {
             
         }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
 
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            ClientDashboard clientDsh = new ClientDashboard();
+            clientDsh.Show();
+            this.Hide();
         }
     }
 }
