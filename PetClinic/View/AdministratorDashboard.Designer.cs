@@ -28,152 +28,150 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.adminLb = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.AdminHeader = new System.Windows.Forms.Label();
+            this.ComboBoxAdmin = new System.Windows.Forms.ComboBox();
+            this.RoleLb = new System.Windows.Forms.Label();
+            this.AdminUsrLb = new System.Windows.Forms.Label();
             this.UsernameLb = new System.Windows.Forms.TextBox();
-            this.LoginBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.dataGridViewAdmin = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmin)).BeginInit();
             this.SuspendLayout();
             // 
-            // adminLb
+            // AdminHeader
             // 
-            this.adminLb.AutoSize = true;
-            this.adminLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.adminLb.Location = new System.Drawing.Point(207, 37);
-            this.adminLb.Name = "adminLb";
-            this.adminLb.Size = new System.Drawing.Size(342, 42);
-            this.adminLb.TabIndex = 1;
-            this.adminLb.Text = "Administrator Panel";
-            this.adminLb.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.adminLb.Click += new System.EventHandler(this.label1_Click);
+            this.AdminHeader.AutoSize = true;
+            this.AdminHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.AdminHeader.Location = new System.Drawing.Point(181, 9);
+            this.AdminHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AdminHeader.Name = "AdminHeader";
+            this.AdminHeader.Size = new System.Drawing.Size(275, 36);
+            this.AdminHeader.TabIndex = 1;
+            this.AdminHeader.Text = "Administrator Panel";
+            this.AdminHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // comboBox1
+            // ComboBoxAdmin
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.ComboBoxAdmin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxAdmin.FormattingEnabled = true;
+            this.ComboBoxAdmin.Items.AddRange(new object[] {
             "Doctor",
             "Client"});
-            this.comboBox1.Location = new System.Drawing.Point(371, 100);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(287, 24);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.ComboBoxAdmin.Location = new System.Drawing.Point(260, 77);
+            this.ComboBoxAdmin.Name = "ComboBoxAdmin";
+            this.ComboBoxAdmin.Size = new System.Drawing.Size(269, 21);
+            this.ComboBoxAdmin.TabIndex = 13;
             // 
-            // label1
+            // RoleLb
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.label1.Location = new System.Drawing.Point(148, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 42);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Role";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.RoleLb.AutoSize = true;
+            this.RoleLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.RoleLb.Location = new System.Drawing.Point(93, 64);
+            this.RoleLb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RoleLb.Name = "RoleLb";
+            this.RoleLb.Size = new System.Drawing.Size(77, 36);
+            this.RoleLb.TabIndex = 12;
+            this.RoleLb.Text = "Role";
+            this.RoleLb.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label2
+            // AdminUsrLb
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.label2.Location = new System.Drawing.Point(147, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 42);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Username";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.AdminUsrLb.AutoSize = true;
+            this.AdminUsrLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.AdminUsrLb.Location = new System.Drawing.Point(92, 115);
+            this.AdminUsrLb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AdminUsrLb.Name = "AdminUsrLb";
+            this.AdminUsrLb.Size = new System.Drawing.Size(150, 36);
+            this.AdminUsrLb.TabIndex = 11;
+            this.AdminUsrLb.Text = "Username";
+            this.AdminUsrLb.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // UsernameLb
             // 
             this.UsernameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.UsernameLb.Location = new System.Drawing.Point(371, 155);
-            this.UsernameLb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UsernameLb.Location = new System.Drawing.Point(260, 122);
+            this.UsernameLb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UsernameLb.Name = "UsernameLb";
-            this.UsernameLb.Size = new System.Drawing.Size(290, 38);
+            this.UsernameLb.Size = new System.Drawing.Size(269, 32);
             this.UsernameLb.TabIndex = 10;
-            this.UsernameLb.TextChanged += new System.EventHandler(this.UsernameLb_TextChanged);
             // 
-            // LoginBtn
+            // AddBtn
             // 
-            this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.LoginBtn.Location = new System.Drawing.Point(155, 207);
-            this.LoginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(126, 41);
-            this.LoginBtn.TabIndex = 14;
-            this.LoginBtn.Text = "Insert";
-            this.LoginBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.AddBtn.Location = new System.Drawing.Point(98, 164);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(94, 33);
+            this.AddBtn.TabIndex = 14;
+            this.AddBtn.Text = "Insert";
+            this.AddBtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // UpdateBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Location = new System.Drawing.Point(304, 207);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 41);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.UpdateBtn.Location = new System.Drawing.Point(210, 164);
+            this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(94, 33);
+            this.UpdateBtn.TabIndex = 15;
+            this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // DeleteBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button2.Location = new System.Drawing.Point(453, 207);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 41);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.DeleteBtn.Location = new System.Drawing.Point(322, 164);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(94, 33);
+            this.DeleteBtn.TabIndex = 16;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // SearchBtn
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button3.Location = new System.Drawing.Point(604, 207);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 41);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = true;
+            this.SearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.SearchBtn.Location = new System.Drawing.Point(435, 164);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(94, 33);
+            this.SearchBtn.TabIndex = 17;
+            this.SearchBtn.Text = "Search";
+            this.SearchBtn.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewAdmin
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(155, 281);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(575, 201);
-            this.dataGridView1.TabIndex = 18;
+            this.dataGridViewAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAdmin.Location = new System.Drawing.Point(98, 224);
+            this.dataGridViewAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewAdmin.Name = "dataGridViewAdmin";
+            this.dataGridViewAdmin.RowHeadersWidth = 51;
+            this.dataGridViewAdmin.RowTemplate.Height = 24;
+            this.dataGridViewAdmin.Size = new System.Drawing.Size(431, 163);
+            this.dataGridViewAdmin.TabIndex = 18;
             // 
             // AdministratorDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 514);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.LoginBtn);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(632, 418);
+            this.Controls.Add(this.dataGridViewAdmin);
+            this.Controls.Add(this.SearchBtn);
+            this.Controls.Add(this.DeleteBtn);
+            this.Controls.Add(this.UpdateBtn);
+            this.Controls.Add(this.AddBtn);
+            this.Controls.Add(this.ComboBoxAdmin);
+            this.Controls.Add(this.RoleLb);
+            this.Controls.Add(this.AdminUsrLb);
             this.Controls.Add(this.UsernameLb);
-            this.Controls.Add(this.adminLb);
+            this.Controls.Add(this.AdminHeader);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdministratorDashboard";
             this.Text = "AdministratorDashboard";
-            this.Load += new System.EventHandler(this.AdministratorDashboard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,15 +179,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label adminLb;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label AdminHeader;
+        private System.Windows.Forms.ComboBox ComboBoxAdmin;
+        private System.Windows.Forms.Label RoleLb;
+        private System.Windows.Forms.Label AdminUsrLb;
         private System.Windows.Forms.TextBox UsernameLb;
-        private System.Windows.Forms.Button LoginBtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button DeleteBtn;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.DataGridView dataGridViewAdmin;
     }
 }
