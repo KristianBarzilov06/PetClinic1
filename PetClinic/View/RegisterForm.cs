@@ -85,16 +85,14 @@ namespace PetClinic.View
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+            this.Hide();
+            LoginForm login = new LoginForm();
+            login.Show();
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

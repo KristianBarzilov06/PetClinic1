@@ -225,6 +225,7 @@
     </Content>
     <Content Include="Resources\1617125234_57134_gif-url.gif" />
     <Content Include="Resources\ddzq4q4-9973bc85-d521-490d-83d4-532b824b22ac.png" />
+    <Content Include="Resources\istockphoto-1216902557-612x6121.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
