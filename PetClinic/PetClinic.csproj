@@ -143,6 +143,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\AdministratorDashboard.resx">
       <DependentUpon>AdministratorDashboard.cs</DependentUpon>
@@ -222,6 +223,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PetClinicDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\1617125234_57134_gif-url.gif" />
+    <Content Include="Resources\ddzq4q4-9973bc85-d521-490d-83d4-532b824b22ac.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

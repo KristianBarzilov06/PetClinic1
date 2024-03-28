@@ -54,7 +54,7 @@
             // 
             this.PetTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.PetTextBox.Location = new System.Drawing.Point(95, 44);
-            this.PetTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PetTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PetTextBox.Name = "PetTextBox";
             this.PetTextBox.Size = new System.Drawing.Size(100, 32);
             this.PetTextBox.TabIndex = 4;
@@ -75,7 +75,7 @@
             // 
             this.DescBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.DescBox.Location = new System.Drawing.Point(31, 130);
-            this.DescBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DescBox.Margin = new System.Windows.Forms.Padding(2);
             this.DescBox.Multiline = true;
             this.DescBox.Name = "DescBox";
             this.DescBox.Size = new System.Drawing.Size(477, 145);
@@ -84,7 +84,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(368, 52);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(135, 20);
             this.dateTimePicker1.TabIndex = 7;
@@ -105,12 +105,13 @@
             // 
             this.SubmitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.SubmitBtn.Location = new System.Drawing.Point(368, 88);
-            this.SubmitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubmitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitBtn.Name = "SubmitBtn";
             this.SubmitBtn.Size = new System.Drawing.Size(133, 34);
             this.SubmitBtn.TabIndex = 9;
             this.SubmitBtn.Text = "Submit";
             this.SubmitBtn.UseVisualStyleBackColor = true;
+            this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
             // ExitBtn
             // 
@@ -137,7 +138,7 @@
             this.Controls.Add(this.DescLb);
             this.Controls.Add(this.PetTextBox);
             this.Controls.Add(this.PetLb);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClientDashboard";
             this.Text = "ClientDashboard";
             this.ResumeLayout(false);
