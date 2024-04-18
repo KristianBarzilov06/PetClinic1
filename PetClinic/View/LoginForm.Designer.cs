@@ -51,7 +51,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 48F);
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(418, 0);
+            this.label1.Location = new System.Drawing.Point(400, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 83);
@@ -62,7 +62,7 @@
             // UsernameLb
             // 
             this.UsernameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.UsernameLb.Location = new System.Drawing.Point(418, 120);
+            this.UsernameLb.Location = new System.Drawing.Point(400, 172);
             this.UsernameLb.Margin = new System.Windows.Forms.Padding(2);
             this.UsernameLb.Name = "UsernameLb";
             this.UsernameLb.Size = new System.Drawing.Size(186, 32);
@@ -74,7 +74,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 48F);
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(197, 93);
+            this.label2.Location = new System.Drawing.Point(179, 145);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(217, 83);
@@ -85,7 +85,7 @@
             // PasswordLb
             // 
             this.PasswordLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.PasswordLb.Location = new System.Drawing.Point(418, 180);
+            this.PasswordLb.Location = new System.Drawing.Point(400, 232);
             this.PasswordLb.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordLb.Name = "PasswordLb";
             this.PasswordLb.PasswordChar = '*';
@@ -98,7 +98,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Uighur", 48F);
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(212, 153);
+            this.label3.Location = new System.Drawing.Point(194, 205);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(202, 83);
@@ -110,7 +110,7 @@
             // 
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.LoginBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LoginBtn.Location = new System.Drawing.Point(498, 241);
+            this.LoginBtn.Location = new System.Drawing.Point(480, 293);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(2);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(105, 42);
@@ -123,7 +123,7 @@
             // 
             this.SignUpLink.AutoSize = true;
             this.SignUpLink.BackColor = System.Drawing.Color.Transparent;
-            this.SignUpLink.Location = new System.Drawing.Point(466, 284);
+            this.SignUpLink.Location = new System.Drawing.Point(448, 336);
             this.SignUpLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SignUpLink.Name = "SignUpLink";
             this.SignUpLink.Size = new System.Drawing.Size(137, 13);
@@ -138,7 +138,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Uighur", 48F);
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(298, 40);
+            this.label4.Location = new System.Drawing.Point(280, 92);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 83);
@@ -153,7 +153,7 @@
             this.comboBoxLogin.Items.AddRange(new object[] {
             "Doctor",
             "Client"});
-            this.comboBoxLogin.Location = new System.Drawing.Point(418, 76);
+            this.comboBoxLogin.Location = new System.Drawing.Point(400, 128);
             this.comboBoxLogin.Name = "comboBoxLogin";
             this.comboBoxLogin.Size = new System.Drawing.Size(184, 21);
             this.comboBoxLogin.TabIndex = 8;
@@ -174,7 +174,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::PetClinic.Properties.Resources.waving_puppies;
-            this.pictureBox1.Location = new System.Drawing.Point(278, 284);
+            this.pictureBox1.Location = new System.Drawing.Point(260, 336);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(325, 314);
             this.pictureBox1.TabIndex = 10;
@@ -184,7 +184,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(160, 300);
+            this.pictureBox2.Location = new System.Drawing.Point(142, 352);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(147, 148);
             this.pictureBox2.TabIndex = 11;
@@ -195,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(672, 600);
+            this.ClientSize = new System.Drawing.Size(819, 724);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ExitBtn);
