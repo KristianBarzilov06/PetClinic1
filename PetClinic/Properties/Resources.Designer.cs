@@ -69,5 +69,45 @@ namespace PetClinic.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1216902557_612x6121 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1216902557-612x6121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_hand_drawn_doodle_blank_speech_bubble_png_image_4043339 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-hand-drawn-doodle-blank-speech-bubble-png-image_4043339", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_oval_comics_with_speech_bubbles_image_1200166 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-oval-comics-with-speech-bubbles-image_1200166", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waving_puppies {
+            get {
+                object obj = ResourceManager.GetObject("waving-puppies", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
