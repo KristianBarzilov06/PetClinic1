@@ -151,6 +151,9 @@
     <EmbeddedResource Include="View\ClientDashboard.resx">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DoctorDashboard.resx">
+      <DependentUpon>DoctorDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

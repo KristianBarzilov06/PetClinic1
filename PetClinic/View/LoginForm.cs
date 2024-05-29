@@ -15,6 +15,7 @@ namespace PetClinic.View
     public partial class LoginForm : Form
     {
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\PetClinic1\\PetClinic\\PetClinicDB.mdf;Integrated Security=True";
+
         public LoginForm()
         {
             InitializeComponent();
@@ -32,21 +33,30 @@ namespace PetClinic.View
             string username = UsernameLb.Text;
             string password = PasswordLb.Text;
 
-            if (AuthenticateClients(username, password))
+            bool isAuthenticated = false;
+
+            if (userType == "Doctor")
             {
-                if (userType == "Doctor")
+                isAuthenticated = AuthenticateDoctors(username, password);
+                if (isAuthenticated)
                 {
                     DoctorDashboard doctorDashboard = new DoctorDashboard();
                     doctorDashboard.Show();
+                    this.Hide();
                 }
-                else if (userType == "Client")
+            }
+            else if (userType == "Client")
+            {
+                isAuthenticated = AuthenticateClients(username, password);
+                if (isAuthenticated)
                 {
                     ClientDashboard clientDashboard = new ClientDashboard();
                     clientDashboard.Show();
+                    this.Hide();
                 }
-                this.Hide();
             }
-            else
+
+            if (!isAuthenticated)
             {
                 MessageBox.Show("Invalid username or password. Please try again.");
             }
@@ -67,6 +77,23 @@ namespace PetClinic.View
                 }
             }
         }
+
+        private bool AuthenticateDoctors(string username, string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Doctors WHERE Username = @Username AND Password = @Password";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+                    connection.Open();
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RegisterForm register = new RegisterForm();
@@ -77,11 +104,6 @@ namespace PetClinic.View
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

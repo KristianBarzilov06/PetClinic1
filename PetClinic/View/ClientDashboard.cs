@@ -19,7 +19,7 @@ namespace PetClinic.View
 
         public class AppointmentDataAccess
         {
-            private string connectionString; // Connection string to your database
+            private string connectionString;
 
             public AppointmentDataAccess(string connectionString)
             {
