@@ -14,22 +14,25 @@ namespace PetClinic.View
 {
     public partial class ClientDashboard : Form
     {
+        int userId = -1;
 
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\PetClinic1\\PetClinic\\PetClinicDB.mdf;Integrated Security=True";
 
         public class AppointmentDataAccess
         {
+            private int userId;
             private string connectionString;
 
-            public AppointmentDataAccess(string connectionString)
+            public AppointmentDataAccess(string connectionString, int userId)
             {
                 this.connectionString = connectionString;
+                this.userId = userId;
             }
 
             public void AddAppointment(string petName, string description, DateTime appointmentDate)
             {
-                string query = "INSERT INTO ClientDashboard (PetName, Description, Date) " +
-                   "VALUES (@PetName, @Description, @Date)";
+                string query = "INSERT INTO ClientDashboard (PetName, Description, Date, ClientId) " +
+                   "VALUES (@PetName, @Description, @Date, @ClientId)";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -37,6 +40,7 @@ namespace PetClinic.View
                     command.Parameters.AddWithValue("@PetName", petName);
                     command.Parameters.AddWithValue("@Description", description);
                     command.Parameters.AddWithValue("@Date", appointmentDate);
+                    command.Parameters.AddWithValue("@ClientId", userId);
 
                     connection.Open();
                     command.ExecuteNonQuery();
@@ -71,7 +75,8 @@ namespace PetClinic.View
             }
             try
             {
-                AppointmentDataAccess appointmentDataAccess = new AppointmentDataAccess(connectionString);
+                userId = (int)Tag;
+                AppointmentDataAccess appointmentDataAccess = new AppointmentDataAccess(connectionString, userId);
 
                 appointmentDataAccess.AddAppointment(petName, desc, Date);
 

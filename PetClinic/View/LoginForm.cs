@@ -47,10 +47,12 @@ namespace PetClinic.View
             }
             else if (userType == "Client")
             {
-                isAuthenticated = AuthenticateClients(username, password);
-                if (isAuthenticated)
+                int id = (int)AuthenticateClients(username, password);
+                if (id >= 0)
                 {
+                    isAuthenticated = true;
                     ClientDashboard clientDashboard = new ClientDashboard();
+                    clientDashboard.Tag = id;
                     clientDashboard.Show();
                     this.Hide();
                 }
@@ -62,18 +64,23 @@ namespace PetClinic.View
             }
         }
 
-        private bool AuthenticateClients(string username, string password)
+        private int? AuthenticateClients(string username, string password)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT COUNT(*) FROM Clients WHERE Username = @Username AND Password = @Password";
+                string query = "SELECT Id FROM Clients WHERE Username = @Username AND Password = @Password";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
                     command.Parameters.AddWithValue("@Password", password);
                     connection.Open();
-                    int count = (int)command.ExecuteScalar();
-                    return count > 0;
+                    int? result = (int)command.ExecuteScalar();
+
+                    if (result == null)
+                    {
+                        result = -1;
+                    }
+                    return result;
                 }
             }
         }

@@ -30,17 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.petClinicDBDataSet = new PetClinic.PetClinicDBDataSet();
             this.petClinicDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.petClinicDBDataSet = new PetClinic.PetClinicDBDataSet();
             this.ExitBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSet)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,50 +53,15 @@
             this.label1.Text = "Apointments";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.DataSource = this.petClinicDBDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 135);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(696, 280);
-            this.dataGridView1.TabIndex = 9;
-            // 
-            // petClinicDBDataSet
-            // 
-            this.petClinicDBDataSet.DataSetName = "PetClinicDBDataSet";
-            this.petClinicDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // petClinicDBDataSetBindingSource
             // 
             this.petClinicDBDataSetBindingSource.DataSource = this.petClinicDBDataSet;
             this.petClinicDBDataSetBindingSource.Position = 0;
             // 
-            // Column1
+            // petClinicDBDataSet
             // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Pet";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Date";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Description";
-            this.Column4.Name = "Column4";
+            this.petClinicDBDataSet.DataSetName = "PetClinicDBDataSet";
+            this.petClinicDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ExitBtn
             // 
@@ -112,6 +73,18 @@
             this.ExitBtn.TabIndex = 21;
             this.ExitBtn.Text = "X";
             this.ExitBtn.UseVisualStyleBackColor = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.petClinicDBDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(47, 135);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(696, 280);
+            this.dataGridView1.TabIndex = 9;
             // 
             // DoctorDashboard
             // 
@@ -123,10 +96,9 @@
             this.Controls.Add(this.label1);
             this.Name = "DoctorDashboard";
             this.Text = "DoctorDashboard";
-            this.Load += new System.EventHandler(this.DoctorDashboard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,13 +107,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.BindingSource petClinicDBDataSetBindingSource;
         private PetClinicDBDataSet petClinicDBDataSet;
         private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

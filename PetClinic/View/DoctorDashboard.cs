@@ -16,13 +16,14 @@ namespace PetClinic.View
         public DoctorDashboard()
         {
             InitializeComponent();
-            dataGridView1 = new DataGridView();
-            this.Controls.Add(dataGridView1);
-            dataGridView1.Dock = DockStyle.Fill;
-
+            InitializeDataGridView();
             LoadData();
         }
-
+        private void InitializeDataGridView()
+        {
+            
+            dataGridView1.AutoGenerateColumns = true;
+        }
         private void LoadData()
         {
             string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PetClinicDB.mdf;Integrated Security=True";
@@ -32,17 +33,48 @@ namespace PetClinic.View
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
+                    MessageBox.Show("Connection opened successfully.");
 
                     string query = @"
-                        SELECT Clients.Username, ClientDashboard.PetName, ClientDashboard.Date, ClientDashboard.Description
-                        FROM Clients
-                        INNER JOIN ClientDashboard ON Clients.Id = CLeintDashboard.Id";
+                    SELECT Clients.Username, ClientDashboard.PetName, ClientDashboard.Date, ClientDashboard.Description
+                    FROM Clients
+                    INNER JOIN ClientDashboard ON Clients.Id = ClientDashboard.ClientId";
 
                     using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection))
                     {
                         DataTable dataTable = new DataTable();
                         dataAdapter.Fill(dataTable);
-                        dataGridView1.DataSource = dataTable;
+
+                        if (dataTable.Rows.Count > 0)
+                        {
+                            MessageBox.Show("Data loaded successfully.");
+                            dataGridView1.DataSource = dataTable;
+
+                            dataGridView1.AutoResizeColumns();
+                            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+                            dataGridView1.Columns[0].HeaderText = "Username";
+                            dataGridView1.Columns[1].HeaderText = "Pet Name";
+                            dataGridView1.Columns[2].HeaderText = "Date";
+                            dataGridView1.Columns[3].HeaderText = "Description";
+                        }
+                        else
+                        {
+                            MessageBox.Show("No data found.");
+                        }
+
+                        foreach (DataColumn column in dataTable.Columns)
+                        {
+                            Console.WriteLine("Column: " + column.ColumnName);
+                        }
+
+                        foreach (DataRow row in dataTable.Rows)
+                        {
+                            foreach (var item in row.ItemArray)
+                            {
+                                Console.WriteLine("Item: " + item);
+                            }
+                        }
                     }
                 }
             }
@@ -52,9 +84,9 @@ namespace PetClinic.View
             }
         }
 
-        private void DoctorDashboard_Load(object sender, EventArgs e)
+        private void ExitBtn_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
