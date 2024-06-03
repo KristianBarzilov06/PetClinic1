@@ -34,6 +34,15 @@
             this.petClinicDBDataSet = new PetClinic.PetClinicDBDataSet();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.RoleLb = new System.Windows.Forms.Label();
+            this.AdminUsrLb = new System.Windows.Forms.Label();
+            this.UsernameLb = new System.Windows.Forms.TextBox();
+            this.ComboBoxDoctor = new System.Windows.Forms.ComboBox();
+            this.ShowAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -45,7 +54,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 48F);
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(249, 9);
+            this.label1.Location = new System.Drawing.Point(39, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 83);
@@ -81,16 +90,127 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DataSource = this.petClinicDBDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 135);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 208);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(696, 280);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.AddBtn.Location = new System.Drawing.Point(53, 512);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(94, 33);
+            this.AddBtn.TabIndex = 22;
+            this.AddBtn.Text = "Insert";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // UpdateBtn
+            // 
+            this.UpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.UpdateBtn.Location = new System.Drawing.Point(151, 512);
+            this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(94, 33);
+            this.UpdateBtn.TabIndex = 23;
+            this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.DeleteBtn.Location = new System.Drawing.Point(249, 512);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(94, 33);
+            this.DeleteBtn.TabIndex = 24;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.SearchBtn.Location = new System.Drawing.Point(655, 512);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(94, 33);
+            this.SearchBtn.TabIndex = 25;
+            this.SearchBtn.Text = "Search";
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click_1);
+            // 
+            // RoleLb
+            // 
+            this.RoleLb.AutoSize = true;
+            this.RoleLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.RoleLb.Location = new System.Drawing.Point(55, 94);
+            this.RoleLb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RoleLb.Name = "RoleLb";
+            this.RoleLb.Size = new System.Drawing.Size(77, 36);
+            this.RoleLb.TabIndex = 28;
+            this.RoleLb.Text = "Role";
+            this.RoleLb.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // AdminUsrLb
+            // 
+            this.AdminUsrLb.AutoSize = true;
+            this.AdminUsrLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.AdminUsrLb.Location = new System.Drawing.Point(54, 145);
+            this.AdminUsrLb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AdminUsrLb.Name = "AdminUsrLb";
+            this.AdminUsrLb.Size = new System.Drawing.Size(150, 36);
+            this.AdminUsrLb.TabIndex = 27;
+            this.AdminUsrLb.Text = "Username";
+            this.AdminUsrLb.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // UsernameLb
+            // 
+            this.UsernameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.UsernameLb.Location = new System.Drawing.Point(222, 152);
+            this.UsernameLb.Margin = new System.Windows.Forms.Padding(2);
+            this.UsernameLb.Name = "UsernameLb";
+            this.UsernameLb.Size = new System.Drawing.Size(269, 32);
+            this.UsernameLb.TabIndex = 26;
+            // 
+            // ComboBoxDoctor
+            // 
+            this.ComboBoxDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxDoctor.FormattingEnabled = true;
+            this.ComboBoxDoctor.Location = new System.Drawing.Point(223, 100);
+            this.ComboBoxDoctor.Name = "ComboBoxDoctor";
+            this.ComboBoxDoctor.Size = new System.Drawing.Size(267, 21);
+            this.ComboBoxDoctor.TabIndex = 29;
+            // 
+            // ShowAll
+            // 
+            this.ShowAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.ShowAll.Location = new System.Drawing.Point(647, 161);
+            this.ShowAll.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowAll.Name = "ShowAll";
+            this.ShowAll.Size = new System.Drawing.Size(102, 33);
+            this.ShowAll.TabIndex = 30;
+            this.ShowAll.Text = "ShowAll";
+            this.ShowAll.UseVisualStyleBackColor = true;
+            this.ShowAll.Click += new System.EventHandler(this.ShowAll_Click);
             // 
             // DoctorDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 571);
+            this.Controls.Add(this.ShowAll);
+            this.Controls.Add(this.ComboBoxDoctor);
+            this.Controls.Add(this.RoleLb);
+            this.Controls.Add(this.AdminUsrLb);
+            this.Controls.Add(this.UsernameLb);
+            this.Controls.Add(this.SearchBtn);
+            this.Controls.Add(this.DeleteBtn);
+            this.Controls.Add(this.UpdateBtn);
+            this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -111,5 +231,14 @@
         private PetClinicDBDataSet petClinicDBDataSet;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button DeleteBtn;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.Label RoleLb;
+        private System.Windows.Forms.Label AdminUsrLb;
+        private System.Windows.Forms.TextBox UsernameLb;
+        private System.Windows.Forms.ComboBox ComboBoxDoctor;
+        private System.Windows.Forms.Button ShowAll;
     }
 }
