@@ -43,6 +43,7 @@
             this.UsernameLb = new System.Windows.Forms.TextBox();
             this.ComboBoxDoctor = new System.Windows.Forms.ComboBox();
             this.ShowAll = new System.Windows.Forms.Button();
+            this.ReturnBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petClinicDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,7 +55,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 48F);
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(39, 9);
+            this.label1.Location = new System.Drawing.Point(57, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 83);
@@ -76,9 +77,10 @@
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.Red;
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ExitBtn.Location = new System.Drawing.Point(12, 12);
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Location = new System.Drawing.Point(755, 12);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(22, 21);
+            this.ExitBtn.Size = new System.Drawing.Size(48, 48);
             this.ExitBtn.TabIndex = 21;
             this.ExitBtn.Text = "X";
             this.ExitBtn.UseVisualStyleBackColor = false;
@@ -90,7 +92,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DataSource = this.petClinicDBDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(53, 208);
+            this.dataGridView1.Location = new System.Drawing.Point(71, 207);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(696, 280);
             this.dataGridView1.TabIndex = 9;
@@ -98,7 +100,7 @@
             // AddBtn
             // 
             this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.AddBtn.Location = new System.Drawing.Point(53, 512);
+            this.AddBtn.Location = new System.Drawing.Point(71, 511);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(94, 33);
@@ -110,7 +112,7 @@
             // UpdateBtn
             // 
             this.UpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.UpdateBtn.Location = new System.Drawing.Point(151, 512);
+            this.UpdateBtn.Location = new System.Drawing.Point(169, 511);
             this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(94, 33);
@@ -122,7 +124,7 @@
             // DeleteBtn
             // 
             this.DeleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.DeleteBtn.Location = new System.Drawing.Point(249, 512);
+            this.DeleteBtn.Location = new System.Drawing.Point(267, 511);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(94, 33);
@@ -134,7 +136,7 @@
             // SearchBtn
             // 
             this.SearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.SearchBtn.Location = new System.Drawing.Point(655, 512);
+            this.SearchBtn.Location = new System.Drawing.Point(673, 511);
             this.SearchBtn.Margin = new System.Windows.Forms.Padding(2);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(94, 33);
@@ -147,7 +149,7 @@
             // 
             this.RoleLb.AutoSize = true;
             this.RoleLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.RoleLb.Location = new System.Drawing.Point(55, 94);
+            this.RoleLb.Location = new System.Drawing.Point(73, 93);
             this.RoleLb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RoleLb.Name = "RoleLb";
             this.RoleLb.Size = new System.Drawing.Size(77, 36);
@@ -159,7 +161,7 @@
             // 
             this.AdminUsrLb.AutoSize = true;
             this.AdminUsrLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.AdminUsrLb.Location = new System.Drawing.Point(54, 145);
+            this.AdminUsrLb.Location = new System.Drawing.Point(72, 144);
             this.AdminUsrLb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AdminUsrLb.Name = "AdminUsrLb";
             this.AdminUsrLb.Size = new System.Drawing.Size(150, 36);
@@ -170,7 +172,7 @@
             // UsernameLb
             // 
             this.UsernameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.UsernameLb.Location = new System.Drawing.Point(222, 152);
+            this.UsernameLb.Location = new System.Drawing.Point(240, 151);
             this.UsernameLb.Margin = new System.Windows.Forms.Padding(2);
             this.UsernameLb.Name = "UsernameLb";
             this.UsernameLb.Size = new System.Drawing.Size(269, 32);
@@ -180,7 +182,7 @@
             // 
             this.ComboBoxDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxDoctor.FormattingEnabled = true;
-            this.ComboBoxDoctor.Location = new System.Drawing.Point(223, 100);
+            this.ComboBoxDoctor.Location = new System.Drawing.Point(241, 99);
             this.ComboBoxDoctor.Name = "ComboBoxDoctor";
             this.ComboBoxDoctor.Size = new System.Drawing.Size(267, 21);
             this.ComboBoxDoctor.TabIndex = 29;
@@ -188,7 +190,7 @@
             // ShowAll
             // 
             this.ShowAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.ShowAll.Location = new System.Drawing.Point(647, 161);
+            this.ShowAll.Location = new System.Drawing.Point(665, 160);
             this.ShowAll.Margin = new System.Windows.Forms.Padding(2);
             this.ShowAll.Name = "ShowAll";
             this.ShowAll.Size = new System.Drawing.Size(102, 33);
@@ -197,11 +199,24 @@
             this.ShowAll.UseVisualStyleBackColor = true;
             this.ShowAll.Click += new System.EventHandler(this.ShowAll_Click);
             // 
+            // ReturnBtn
+            // 
+            this.ReturnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ReturnBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReturnBtn.Image = global::PetClinic.Properties.Resources.return4;
+            this.ReturnBtn.Location = new System.Drawing.Point(12, 12);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(49, 48);
+            this.ReturnBtn.TabIndex = 31;
+            this.ReturnBtn.UseVisualStyleBackColor = false;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
+            // 
             // DoctorDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 571);
+            this.ClientSize = new System.Drawing.Size(815, 571);
+            this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.ShowAll);
             this.Controls.Add(this.ComboBoxDoctor);
             this.Controls.Add(this.RoleLb);
@@ -240,5 +255,6 @@
         private System.Windows.Forms.TextBox UsernameLb;
         private System.Windows.Forms.ComboBox ComboBoxDoctor;
         private System.Windows.Forms.Button ShowAll;
+        private System.Windows.Forms.Button ReturnBtn;
     }
 }

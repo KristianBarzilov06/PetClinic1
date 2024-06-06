@@ -15,9 +15,11 @@ namespace PetClinic.View
     {
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PetClinicDB.mdf;Integrated Security=True";
 
-        public DoctorDashboard()
+        private LoginForm loginForm;
+        public DoctorDashboard(LoginForm loginForm)
         {
             InitializeComponent();
+            this.loginForm = loginForm;
             InitializeDataGridView();
             ComboBoxDoctor.Items.AddRange(new string[] { "Doctor", "Client" });
             SearchBtn.Click += new EventHandler(SearchBtn_Click_1);
@@ -145,11 +147,6 @@ namespace PetClinic.View
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }
-
-        private void ExitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void ShowAll_Click(object sender, EventArgs e)
@@ -294,6 +291,17 @@ namespace PetClinic.View
                     }
                 }
             }
+        }
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            loginForm.EnableReturnButton();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

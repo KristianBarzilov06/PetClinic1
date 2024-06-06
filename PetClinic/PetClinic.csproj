@@ -111,12 +111,6 @@
     <Compile Include="View\AddNewAccount.Designer.cs">
       <DependentUpon>AddNewAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\AdministratorDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\AdministratorDashboard.Designer.cs">
-      <DependentUpon>AdministratorDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ClientDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,9 +147,6 @@
     </Compile>
     <EmbeddedResource Include="View\AddNewAccount.resx">
       <DependentUpon>AddNewAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\AdministratorDashboard.resx">
-      <DependentUpon>AdministratorDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ClientDashboard.resx">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
@@ -241,6 +232,11 @@
     <None Include="Resources\pngtree-oval-comics-with-speech-bubbles-image_1200166.jpg" />
     <None Include="Resources\pngtree-hand-drawn-doodle-blank-speech-bubble-png-image_4043339.png" />
     <Content Include="Resources\puglie-pug-puglie.gif" />
+    <None Include="Resources\return.png" />
+    <None Include="Resources\return1.png" />
+    <None Include="Resources\return2.png" />
+    <None Include="Resources\return3.png" />
+    <None Include="Resources\return4.png" />
     <Content Include="Resources\waving-puppies.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

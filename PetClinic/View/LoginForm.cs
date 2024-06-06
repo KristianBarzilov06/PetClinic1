@@ -19,6 +19,11 @@ namespace PetClinic.View
         public LoginForm()
         {
             InitializeComponent();
+            ReturnBtn.Enabled = false;
+        }
+        public void EnableReturnButton()
+        {
+            ReturnBtn.Enabled = true;
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
@@ -40,7 +45,7 @@ namespace PetClinic.View
                 isAuthenticated = AuthenticateDoctors(username, password);
                 if (isAuthenticated)
                 {
-                    DoctorDashboard doctorDashboard = new DoctorDashboard();
+                    DoctorDashboard doctorDashboard = new DoctorDashboard(this);
                     doctorDashboard.Show();
                     this.Hide();
                 }
@@ -51,7 +56,7 @@ namespace PetClinic.View
                 if (id >= 0)
                 {
                     isAuthenticated = true;
-                    ClientDashboard clientDashboard = new ClientDashboard();
+                    ClientDashboard clientDashboard = new ClientDashboard(this);
                     clientDashboard.Tag = id;
                     clientDashboard.Show();
                     this.Hide();
@@ -103,7 +108,7 @@ namespace PetClinic.View
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RegisterForm register = new RegisterForm();
+            RegisterForm register = new RegisterForm(this);
             register.Show();
             this.Hide();
         }
@@ -111,6 +116,20 @@ namespace PetClinic.View
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        public void ClearCredentials()
+        {
+            UsernameLb.Text = " ";
+            PasswordLb.Text = " ";
+        }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            //Полетата не се изпразват при сменянето на прозореца
+            this.ClearCredentials();
+            this.EnableReturnButton();
+            this.Show();
+            this.Hide();
         }
     }
 }

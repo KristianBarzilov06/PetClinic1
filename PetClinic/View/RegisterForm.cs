@@ -18,19 +18,21 @@ namespace PetClinic.View
     public partial class RegisterForm : Form
     {
         private DoctorController controller;
+        private LoginForm loginForm;
 
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\PetClinic1\\PetClinic\\PetClinicDB.mdf;Integrated Security=True";
 
-        public RegisterForm()
+        public RegisterForm(LoginForm loginForm)
         {
             InitializeComponent();
             controller = new DoctorController();
+            this.loginForm = loginForm;
         }
 
         private void linkSignIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.Show();
+            loginForm.EnableReturnButton();
+            loginForm.Show();
             this.Hide();
         }
 
@@ -85,14 +87,28 @@ namespace PetClinic.View
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            this.Hide();
             LoginForm login = new LoginForm();
+            login.EnableReturnButton();
             login.Show();
+            this.Hide();
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        public void ClearCredentials()
+        {
+            usernameRegisterTxt.Text = " ";
+            passwordRegisterTxt.Text = " ";
+        }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            this.ClearCredentials();
+            loginForm.EnableReturnButton();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

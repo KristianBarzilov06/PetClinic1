@@ -47,9 +47,11 @@ namespace PetClinic.View
                 }
             }
         }
-        public ClientDashboard()
+        private LoginForm loginForm;
+        public ClientDashboard(LoginForm loginForm)
         {
             InitializeComponent();
+            this.loginForm = loginForm;
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -88,6 +90,13 @@ namespace PetClinic.View
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
+        }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            loginForm.EnableReturnButton();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

@@ -41,6 +41,7 @@
             this.ExitBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.ReturnBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // 
             this.LoginLink.AutoSize = true;
             this.LoginLink.BackColor = System.Drawing.Color.Transparent;
-            this.LoginLink.Location = new System.Drawing.Point(493, 501);
+            this.LoginLink.Location = new System.Drawing.Point(570, 572);
             this.LoginLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoginLink.Name = "LoginLink";
             this.LoginLink.Size = new System.Drawing.Size(168, 13);
@@ -60,7 +61,7 @@
             // RegisterBtn
             // 
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.RegisterBtn.Location = new System.Drawing.Point(556, 457);
+            this.RegisterBtn.Location = new System.Drawing.Point(633, 528);
             this.RegisterBtn.Margin = new System.Windows.Forms.Padding(2);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(105, 42);
@@ -160,9 +161,10 @@
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.Red;
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ExitBtn.Location = new System.Drawing.Point(12, 12);
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Location = new System.Drawing.Point(687, 12);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(22, 21);
+            this.ExitBtn.Size = new System.Drawing.Size(51, 53);
             this.ExitBtn.TabIndex = 20;
             this.ExitBtn.Text = "X";
             this.ExitBtn.UseVisualStyleBackColor = false;
@@ -173,7 +175,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(188, 287);
+            this.pictureBox1.Location = new System.Drawing.Point(238, 349);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 236);
             this.pictureBox1.TabIndex = 21;
@@ -185,7 +187,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(281, 401);
+            this.label5.Location = new System.Drawing.Point(334, 450);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 23);
@@ -193,12 +195,25 @@
             this.label5.Text = "You new here?";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // ReturnBtn
+            // 
+            this.ReturnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ReturnBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReturnBtn.Image = global::PetClinic.Properties.Resources.return4;
+            this.ReturnBtn.Location = new System.Drawing.Point(12, 12);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(52, 53);
+            this.ReturnBtn.TabIndex = 23;
+            this.ReturnBtn.UseVisualStyleBackColor = false;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(672, 523);
+            this.ClientSize = new System.Drawing.Size(749, 592);
+            this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ExitBtn);
@@ -234,5 +249,6 @@
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button ReturnBtn;
     }
 }

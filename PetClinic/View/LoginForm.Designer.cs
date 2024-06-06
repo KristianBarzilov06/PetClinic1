@@ -40,6 +40,7 @@
             this.comboBoxLogin = new System.Windows.Forms.ComboBox();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ReturnBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +109,7 @@
             // 
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.LoginBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LoginBtn.Location = new System.Drawing.Point(480, 293);
+            this.LoginBtn.Location = new System.Drawing.Point(633, 529);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(2);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(105, 42);
@@ -121,7 +122,7 @@
             // 
             this.SignUpLink.AutoSize = true;
             this.SignUpLink.BackColor = System.Drawing.Color.Transparent;
-            this.SignUpLink.Location = new System.Drawing.Point(448, 336);
+            this.SignUpLink.Location = new System.Drawing.Point(601, 572);
             this.SignUpLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SignUpLink.Name = "SignUpLink";
             this.SignUpLink.Size = new System.Drawing.Size(137, 13);
@@ -160,9 +161,10 @@
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.Red;
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ExitBtn.Location = new System.Drawing.Point(12, 12);
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Location = new System.Drawing.Point(692, 12);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(22, 21);
+            this.ExitBtn.Size = new System.Drawing.Size(46, 48);
             this.ExitBtn.TabIndex = 9;
             this.ExitBtn.Text = "X";
             this.ExitBtn.UseVisualStyleBackColor = false;
@@ -172,11 +174,23 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::PetClinic.Properties.Resources.waving_puppies;
-            this.pictureBox1.Location = new System.Drawing.Point(106, 269);
+            this.pictureBox1.Location = new System.Drawing.Point(208, 274);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(305, 311);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            // 
+            // ReturnBtn
+            // 
+            this.ReturnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ReturnBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReturnBtn.Image = global::PetClinic.Properties.Resources.return4;
+            this.ReturnBtn.Location = new System.Drawing.Point(12, 12);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(49, 48);
+            this.ReturnBtn.TabIndex = 11;
+            this.ReturnBtn.UseVisualStyleBackColor = false;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // LoginForm
             // 
@@ -184,6 +198,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(749, 592);
+            this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.comboBoxLogin);
@@ -216,5 +231,6 @@
         private System.Windows.Forms.ComboBox comboBoxLogin;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button ReturnBtn;
     }
 }
