@@ -227,6 +227,7 @@
       <DependentUpon>PetClinicDB.mdf</DependentUpon>
     </Content>
     <Content Include="Resources\1617125234_57134_gif-url.gif" />
+    <None Include="Resources\751099bbbf3521a7318776a55a78cc76.jpg" />
     <Content Include="Resources\ddzq4q4-9973bc85-d521-490d-83d4-532b824b22ac.png" />
     <Content Include="Resources\istockphoto-1216902557-612x6121.jpg" />
     <None Include="Resources\pngtree-oval-comics-with-speech-bubbles-image_1200166.jpg" />

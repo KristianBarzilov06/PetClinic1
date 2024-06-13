@@ -98,5 +98,10 @@ namespace PetClinic.View
             loginForm.Show();
             this.Hide();
         }
+
+        private void ClientDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

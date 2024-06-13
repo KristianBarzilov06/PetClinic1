@@ -63,6 +63,16 @@ namespace PetClinic.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _751099bbbf3521a7318776a55a78cc76 {
+            get {
+                object obj = ResourceManager.GetObject("751099bbbf3521a7318776a55a78cc76", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _return {
             get {
                 object obj = ResourceManager.GetObject("return", resourceCulture);
